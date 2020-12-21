@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <title>Node Authentication</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <style>
+         body{ padding-top:80px; background: url('https://image.freepik.com/free-vector/cartoon-rainbow-hot-air-balloon-with-garlands-sky-among-clouds-sun-seamless-pattern_214720-229.jpg'); }
+        div.container { background-color: #ffffff;}
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="col-sm-6 col-sm-offset-3">
+
+    <h1><span class="fa fa-sign-in"></span> Đăng Nhập </h1>
+
+    <% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+
+    <!-- LOGIN FORM -->
+    <form action="/login" method="post">
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" name="email">
+        </div>
+        <div class="form-group">
+            <label>Mật Khẩu</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+
+        <button type="submit" class="btn btn-warning btn-lg">Đăng Nhập</button>
+    </form>
+
+    <hr>
+
+    <p>Chưa có tài khoản? <a href="/signup">Đăng kí</a></p>
+    <p>Về lại <a href="/trangchu">Trang chủ</a>.</p>
+
+</div>
+</div>
+</body>
+</html>

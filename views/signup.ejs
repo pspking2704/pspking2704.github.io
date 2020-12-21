@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <title>Node Authentication</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <style>
+        body{ padding-top:40px; background: url('https://image.freepik.com/free-vector/cartoon-rainbow-hot-air-balloon-with-garlands-sky-among-clouds-sun-seamless-pattern_214720-229.jpg'); }
+        div.container { background-color: #ffffff;}
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="col-sm-6 col-sm-offset-3">
+
+    <h1><span class="fa fa-sign-in"></span> Đăng Kí</h1>
+
+    <% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+    <% } %>
+
+    <!-- LOGIN FORM -->
+
+    <form action="/signup" method="post">
+        <div class="form-group">
+            <label>Họ và tên</label>
+            <input type="text" class="form-control" name="fullname">
+        </div>
+        <div class="form-group">
+            <label>Số điên thoại</label>
+            <input type="text" class="form-control" name="phone">
+        </div>
+        <div class="form-group">
+            <label>Tên tài khoản(Email)</label>
+            <input type="text" class="form-control" name="email">
+        </div>
+        <div class="form-group">
+            <label>Mật Khẩu</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+
+        <button type="submit" class="btn btn-warning btn-lg">Đăng kí</button>
+    </form>
+
+    <hr>
+
+    <p>Đã có tài khoản? <a href="/login">Đăng nhập</a></p>
+    <p>Về lại <a href="/trangchu">Trang chủ</a>.</p>
+
+
+</div>
+</div>
+</body>
+</html>
